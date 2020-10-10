@@ -17,11 +17,11 @@ class Credential:
 
         Credential.credentials_list.append(self)
 
-    # def delete_credential(self):
-    #     """
-    #     delete_credential method deletes the credential that the user no longer needs
-    #     """
-    #     Credential.credentials_list.remove(self)
+    def delete_credential(self):
+        """
+        delete_credential method deletes the credential that the user no longer needs
+        """
+        Credential.credentials_list.remove(self)
 
     # @classmethod
     # def find_by_account(cls, account):
