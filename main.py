@@ -65,4 +65,32 @@ class Credential:
         '''
         return cls.credentials_list
 
+class User:
+    '''
+    Class that generates instances of the accounts
+    '''
+    user_list = []
+
+    def __init__(self, account_name, username, password):
+        self.account_name = account_name
+        self.username = username
+        self.password = password
+    
+    def save_user_info(self):
+        '''
+        Method for saving the user information of the accounts
+        '''
+
+        User.user_list.append(self)
+    
+    @classmethod
+    def find_by_account_name(cls,account_name):
+        '''
+        This method takes in an account_name and matches an account that matches that account_name.
+        '''
+
+        for acc in cls.user_list:
+            if acc.account_name == account_name:
+                return acc
+
     
