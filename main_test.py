@@ -84,5 +84,12 @@ class TestCredential(unittest.TestCase):
         authentic_account = Credential.authentication('Diane', 'dee420')
         self.assertEqual(authentic_account.username, test_credential.username)
         self.assertEqual(authentic_account.password, test_credential.password)
+
+    def test_display_credentials(self):
+        '''
+        Test case to test whether the existing credentials can be displayed
+        '''
+        self.assertEqual(Credential.display_details(), Credential.credentials_list)
+        
 if __name__ ==  '__main__':
     unittest.main()

@@ -58,12 +58,11 @@ class Credential:
                 return authentic 
 
     
-    # @classmethod
-    # def display_details(cls)
-    #     """
-    #     This method returns the credentials list
-    #     """
-    #     return cls.credentials_list
-            
+    @classmethod
+    def display_details(cls):
+        '''
+        Method that displays existing credentials.
+        '''
+        return cls.credentials_list
 
     
