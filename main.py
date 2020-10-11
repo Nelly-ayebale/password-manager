@@ -5,8 +5,8 @@ class Credential:
     Class that generates new instances of credentials
     """
 
-    def __init__(self,account_name, username, password):
-        self.account_name = account_name
+    def __init__(self, username, password):
+        
         self.username = username
         self.password = password
 
@@ -23,39 +23,39 @@ class Credential:
         """
         Credential.credentials_list.remove(self)
 
-    # @classmethod
-    # def find_by_account(cls, account):
-    #     """
-    #     This method takes in an account and matches an account that matches that account.
+    @classmethod
+    def find_by_username(cls, username):
+        """
+        This method takes in an account and matches an account that matches that account.
 
-    #     Args:
-    #         account: Account to search for
-    #     Returns:
-    #     The aacount that matches the account searched for.
-    #     """
+        Args:
+            account: Account to search for
+        Returns:
+        The aacount that matches the account searched for.
+        """
 
-    #     for account in cls.credentials_list:
-    #         if account.account_name == account:
-    #             return account
+        for account in cls.credentials_list:
+            if account.username == username:
+                return account
     
-    # @classmethod
+    @classmethod
     
-    # def account_details_exist(cls, account):
-    #     """
-    #     Method that checks if the account exists
-    #     """
-    #     for account in cls.credentials_list:
-    #         if account.account_name == account:
-    #             return True
+    def account_details_exist(cls, username):
+        """
+        Method that checks if the account exists
+        """
+        for account in cls.credentials_list:
+            if account.username == username:
+                return True
 
-    #     return False
+        return False
     
-    # @classmethod
-    # def authentication(cls, username, password):
+    @classmethod
+    def authentication(cls, username, password):
 
-    #     for authentic in cls.credentials_list:
-    #         if authentic.username == username and authentic.password == password:
-    #             return authentic 
+        for authentic in cls.credentials_list:
+            if authentic.username == username and authentic.password == password:
+                return authentic 
 
     
     # @classmethod
