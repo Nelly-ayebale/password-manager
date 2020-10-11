@@ -93,4 +93,23 @@ class User:
             if acc.account_name == account_name:
                 return acc
 
+    @classmethod
+    def account_exists(cls,account_name):
+        '''
+        Method that checks if the account exists
+        '''
+        for acc in cls.user_list:
+            if acc.account_name == account_name:
+                return True
+        
+        return False
+
+    @classmethod
+    def display_accounts(cls):
+        '''
+        Method that displays the accounts
+        '''
+        return cls.user_list
+
+
     

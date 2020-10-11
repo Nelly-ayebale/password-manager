@@ -1,5 +1,6 @@
 import unittest
 from main import Credential
+from main import User
 
 class TestCredential(unittest.TestCase):
     '''
@@ -90,6 +91,33 @@ class TestCredential(unittest.TestCase):
         Test case to test whether the existing credentials can be displayed
         '''
         self.assertEqual(Credential.display_details(), Credential.credentials_list)
-        
+
+class TestUser(unittest.TestCase):
+    '''
+    Test class that defines test cases for the User class behaviours
+    '''
+
+    def setUp(self):
+        '''
+        This method runs each time before every test case.
+        '''
+
+        self.new_user = User("Slack","Ayebale Nelly Abigail", "password123")
+
+    def tearDown(self):
+        '''
+        This method runs each time after every test case.
+        '''
+        User.user_list = []
+    
+    def test_init(self):
+        """
+        Method to test if the ojects have been initalized properly.
+        """
+        self.assertEqual(self.new_user.account_name, "Slack")
+        self.assertEqual(self.new_user.username, "Ayebale Nelly Abigail")
+        self.assertEqual(self.new_user.password, "password123")
+
+
 if __name__ ==  '__main__':
     unittest.main()
