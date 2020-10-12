@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td>
- This is an application built with python3.8 to enable a user to manage their passwords and also be able to generate new passwords for the users.
+ This is an application built with python3.8 to enable a user to manage their passwords and also be able to generate new passwords for the users instead of the applications generating one for them.
 </td>
 </tr>
 </table>
