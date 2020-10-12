@@ -95,7 +95,7 @@ def main():
         print('\n')
 
         while True:
-                    print("Please use these short codes : cc - create credential,dc- display Credential, lo - login, fa -find account, ex -exit the account list")
+                    print("Please use these short codes : cc - create credential,dc- display Credential, lo - login, fa -find account,del- delete Credential, ex -exit the account list")
 
                     short_code = input().lower()
 
@@ -200,6 +200,23 @@ def main():
                                 
                                 search_for_credential = find_credential(search_credential)
                                 print(f"This Account {search_for_credential.username} exists with the password {search_for_credential.password} ")
+                                print('-' * 20)
+
+                                
+                                    
+                            else:
+                                print("That credential does not exist")
+
+                    elif short_code == 'del':
+
+                            print("Enter the Credential you want to delete")
+
+                            searching_credential = input()
+                            if account_exist(searching_credential):
+                                
+                                searching_for_credential = find_credential(searching_credential)
+                                searching_for_credential.deleting_credential()
+                                print(f"This Account  {searching_for_credential.username} has been deleted!")
                                 print('-' * 20)
 
                                 
