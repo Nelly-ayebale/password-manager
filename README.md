@@ -1,4 +1,4 @@
-# ![PASSWORD MANAGER]
+# [PASSWORD MANAGER]
 # Password-Manager
 <table>
 <tr>
