@@ -55,7 +55,8 @@ class Credential:
 
         for authentic in cls.credentials_list:
             if authentic.username == username and authentic.password == password:
-                return authentic 
+                return authentic
+        return 0 
 
     
     @classmethod
