@@ -114,7 +114,7 @@ def main():
                             print ('\n')
 
                     elif short_code == 'lo':
-                            print('Please Note inorder for you to login you must have a credentials account saved for you to use the Login option! Thankyou.')
+                            print('Please Note inorder for you to login you must have a credentials account with Password Manager saved for you to use the Login option! Thankyou.')
                             print('Enter your Credentials for Password Manager to proceed :')
                             print("-"*10)
 
