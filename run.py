@@ -17,7 +17,7 @@ def save_credential(credential):
     """
     credential.save_credential()
 
-def deleting_credential(credential):
+def delete_credential(credential):
     """
     Function that deletes a credential
     """
@@ -159,7 +159,7 @@ def main():
                                             print('\n')
 
                                             for account in display_accounts():
-                                                print(f"{account.account_name} {account.username} {account.password}")
+                                                print(f"The Account {account.account_name} has a username of {account.username} and the password is {account.password}")
                                                 print('\n')
                                             
                                             
@@ -213,10 +213,9 @@ def main():
 
                             searching_credential = input()
                             if account_exist(searching_credential):
-                                
-                                searching_for_credential = find_credential(searching_credential)
-                                searching_for_credential.deleting_credential()
-                                print(f"This Account  {searching_for_credential.username} has been deleted!")
+                                search_cred = find_credential(searching_credential)
+                                search_cred.delete_credential()
+                                print(f"This Account  {search_cred.username} has been deleted!")
                                 print('-' * 20)
 
                                 
