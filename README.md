@@ -35,6 +35,7 @@ Python 3.8.2
 - The application should take in the user's username and password to their existing account
 - The application should create new account details for a user.
 - The application should display various account credentials and their passwords.
+- The application should delete the credentials that are no longer in need by the user.
 
 
 [MIT](LICENSE) © 
